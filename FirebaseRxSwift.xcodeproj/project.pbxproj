@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043DAB2A56A72D88090D7DA0 /* Pods_FirebaseRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E461C498F942E8604532E0 /* Pods_FirebaseRxSwift.framework */; };
 		47DF665C26D004DE0066B518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF665B26D004DE0066B518 /* AppDelegate.swift */; };
 		47DF665E26D004DE0066B518 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF665D26D004DE0066B518 /* SceneDelegate.swift */; };
 		47DF666326D004DE0066B518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DF666126D004DE0066B518 /* Main.storyboard */; };
@@ -18,9 +19,11 @@
 		47DF667E26D00E0E0066B518 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF667D26D00E0E0066B518 /* SignUpViewController.swift */; };
 		47DF668026D00E180066B518 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF667F26D00E180066B518 /* StartViewController.swift */; };
 		47DF668426D011AE0066B518 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF668326D011AE0066B518 /* GradientButton.swift */; };
+		47DF668626D03E4B0066B518 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47DF668526D03E4A0066B518 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30FE1D31646556A716D01C5E /* Pods-FirebaseRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseRxSwift.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseRxSwift/Pods-FirebaseRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		47DF665826D004DE0066B518 /* FirebaseRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47DF665B26D004DE0066B518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47DF665D26D004DE0066B518 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +37,9 @@
 		47DF667D26D00E0E0066B518 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		47DF667F26D00E180066B518 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		47DF668326D011AE0066B518 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		47DF668526D03E4A0066B518 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D67B2F7A42E5CC52C1975F7 /* Pods-FirebaseRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseRxSwift.release.xcconfig"; path = "Target Support Files/Pods-FirebaseRxSwift/Pods-FirebaseRxSwift.release.xcconfig"; sourceTree = "<group>"; };
+		C3E461C498F942E8604532E0 /* Pods_FirebaseRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043DAB2A56A72D88090D7DA0 /* Pods_FirebaseRxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +59,8 @@
 			children = (
 				47DF665A26D004DE0066B518 /* FirebaseRxSwift */,
 				47DF665926D004DE0066B518 /* Products */,
+				CE46A71748193997F700B808 /* Pods */,
+				C14D13D95A472BDBE92F7E69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +82,7 @@
 				47DF666126D004DE0066B518 /* Main.storyboard */,
 				47DF666426D004E10066B518 /* Assets.xcassets */,
 				47DF666626D004E10066B518 /* LaunchScreen.storyboard */,
+				47DF668526D03E4A0066B518 /* GoogleService-Info.plist */,
 				47DF666926D004E10066B518 /* Info.plist */,
 			);
 			path = FirebaseRxSwift;
@@ -98,6 +108,23 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		C14D13D95A472BDBE92F7E69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3E461C498F942E8604532E0 /* Pods_FirebaseRxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE46A71748193997F700B808 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30FE1D31646556A716D01C5E /* Pods-FirebaseRxSwift.debug.xcconfig */,
+				9D67B2F7A42E5CC52C1975F7 /* Pods-FirebaseRxSwift.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47DF666C26D004E10066B518 /* Build configuration list for PBXNativeTarget "FirebaseRxSwift" */;
 			buildPhases = (
+				6123604D7226350406D3BE12 /* [CP] Check Pods Manifest.lock */,
 				47DF665426D004DE0066B518 /* Sources */,
 				47DF665526D004DE0066B518 /* Frameworks */,
 				47DF665626D004DE0066B518 /* Resources */,
+				AE11F8D1B95163414450678C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,12 +185,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				47DF666826D004E10066B518 /* LaunchScreen.storyboard in Resources */,
+				47DF668626D03E4B0066B518 /* GoogleService-Info.plist in Resources */,
 				47DF666526D004E10066B518 /* Assets.xcassets in Resources */,
 				47DF666326D004DE0066B518 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6123604D7226350406D3BE12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirebaseRxSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE11F8D1B95163414450678C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseRxSwift/Pods-FirebaseRxSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseRxSwift/Pods-FirebaseRxSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirebaseRxSwift/Pods-FirebaseRxSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		47DF665426D004DE0066B518 /* Sources */ = {
@@ -252,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -307,7 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -319,6 +391,7 @@
 		};
 		47DF666D26D004E10066B518 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30FE1D31646556A716D01C5E /* Pods-FirebaseRxSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -338,6 +411,7 @@
 		};
 		47DF666E26D004E10066B518 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D67B2F7A42E5CC52C1975F7 /* Pods-FirebaseRxSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
