@@ -12,6 +12,8 @@ target 'FirebaseRxSwift' do
   pod 'Firebase/Auth'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|

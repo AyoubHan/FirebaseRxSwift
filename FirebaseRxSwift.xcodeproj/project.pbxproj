@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		043DAB2A56A72D88090D7DA0 /* Pods_FirebaseRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E461C498F942E8604532E0 /* Pods_FirebaseRxSwift.framework */; };
+		47638FD126D13C540010D75E /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47638FD026D13C540010D75E /* Password.swift */; };
+		47638FD326D13DBC0010D75E /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47638FD226D13DBC0010D75E /* Storyboard.swift */; };
 		47DF665C26D004DE0066B518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF665B26D004DE0066B518 /* AppDelegate.swift */; };
 		47DF665E26D004DE0066B518 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF665D26D004DE0066B518 /* SceneDelegate.swift */; };
 		47DF666326D004DE0066B518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DF666126D004DE0066B518 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		30FE1D31646556A716D01C5E /* Pods-FirebaseRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseRxSwift.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseRxSwift/Pods-FirebaseRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		47638FD026D13C540010D75E /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
+		47638FD226D13DBC0010D75E /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		47DF665826D004DE0066B518 /* FirebaseRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47DF665B26D004DE0066B518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47DF665D26D004DE0066B518 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 			children = (
 				47DF667726D00CC00066B518 /* ButtonStyles.swift */,
 				47DF668326D011AE0066B518 /* GradientButton.swift */,
+				47638FD026D13C540010D75E /* Password.swift */,
+				47638FD226D13DBC0010D75E /* Storyboard.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -240,10 +246,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47638FD126D13C540010D75E /* Password.swift in Sources */,
 				47DF667E26D00E0E0066B518 /* SignUpViewController.swift in Sources */,
 				47DF668426D011AE0066B518 /* GradientButton.swift in Sources */,
 				47DF668026D00E180066B518 /* StartViewController.swift in Sources */,
 				47DF667826D00CC00066B518 /* ButtonStyles.swift in Sources */,
+				47638FD326D13DBC0010D75E /* Storyboard.swift in Sources */,
 				47DF665C26D004DE0066B518 /* AppDelegate.swift in Sources */,
 				47DF665E26D004DE0066B518 /* SceneDelegate.swift in Sources */,
 				47DF667C26D00E030066B518 /* SignInViewController.swift in Sources */,

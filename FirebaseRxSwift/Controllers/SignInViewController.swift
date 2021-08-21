@@ -18,7 +18,6 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         setButton()
         setUpLabel()
-        securePasswordEntry()
     }
     
     
@@ -35,7 +34,7 @@ class SignInViewController: UIViewController {
                 if error != nil {
                     self.showError(error?.localizedDescription ?? "")
                 } else {
-                    //TODO: Transition to homeviewcontroller
+                    self.transitionToHome()
                 }
             }
         }
@@ -44,13 +43,15 @@ class SignInViewController: UIViewController {
     private func setUpLabel() {
         errorLabel.isHidden = true
     }
+    
+    private func transitionToHome() {
+        let homeVC = storyboard?.instantiateViewController(identifier: Storyboard.homeVC) as? HomeViewController
+        view?.window?.rootViewController = homeVC
+        view?.window?.makeKeyAndVisible()
+    }
 
     private func setButton() {
         ButtonStyles.styleButton(signInButton)
-    }
-    
-    private func securePasswordEntry() {
-        passwordTextField.isSecureTextEntry = true
     }
     
     private func fieldsCheck() -> String? {
@@ -58,16 +59,20 @@ class SignInViewController: UIViewController {
             return "Please fill in all the text fields"
         }
         
-        //TODO: Password check
+        let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         
+        if Password.isSecure(password) == false {
+            return "Please make sure your password is at least 8 characters long, contains one special character and one number"
+        }
         return nil
     }
     
     private func showError(_ message: String) {
         errorLabel.text = message
         errorLabel.isHidden = false
-        errorLabel.textColor = .red
-        errorLabel.alpha = 1
+        errorLabel.textColor = .orange
+        errorLabel.alpha = 0.65
+        errorLabel.layer.cornerRadius = 15.0
     }
 
 }

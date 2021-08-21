@@ -21,7 +21,6 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         setButton()
         setErrorLabel()
-        securePasswordEntry()
     }
     
     @IBAction func signUpTapped(_ sender: UIButton) {
@@ -45,11 +44,16 @@ class SignUpViewController: UIViewController {
                             self.showError("User's data could not be synced with our database, please retry in a moment")
                         }
                     }
-                    
-                    // TODO: Transition to home view controller
+                    self.transitionToHome()
                 }
             }
         }
+    }
+    
+    private func transitionToHome() {
+        let homeVC = storyboard?.instantiateViewController(identifier: Storyboard.homeVC) as? HomeViewController
+        view?.window?.rootViewController = homeVC
+        view?.window?.makeKeyAndVisible()
     }
     
     private func setButton() {
@@ -60,22 +64,23 @@ class SignUpViewController: UIViewController {
         errorLabel.isHidden = true
     }
     
-    private func securePasswordEntry() {
-        passwordTextField.isSecureTextEntry = true
-    }
-    
     private func fieldsCheck() -> String? {
         if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return "Please fill in all the text fields"
         }
         
-        //TODO: Password check
-        
+        let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        if Password.isSecure(password) == false {
+            return "Please make sure your password is at least 8 characters long, contains one special character and one number"
+        }
         return nil
     }
     
     private func showError(_ message: String) {
+        errorLabel.text = message
         errorLabel.isHidden = false
-        errorLabel.textColor = .red
+        errorLabel.textColor = .orange
+        errorLabel.alpha = 0.65
+        errorLabel.layer.cornerRadius = 15.0
     }
 }

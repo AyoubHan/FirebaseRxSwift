@@ -12,7 +12,7 @@
         <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="FirebaseRxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="startVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="StartViewController" customModule="FirebaseRxSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,6 +26,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebU-Kb-kjj" customClass="GradientButtonView" customModule="FirebaseRxSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
                                         <color key="backgroundColor" red="1" green="0.43845224939999999" blue="0.61513670649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="21"/>
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -44,6 +45,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNy-l2-TyT" customClass="GradientButtonView" customModule="FirebaseRxSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="65" width="374" height="55"/>
                                         <color key="backgroundColor" red="1" green="0.43845224939999999" blue="0.61513670649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="21"/>
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -101,24 +103,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TpX-ha-RhT">
                                 <rect key="frame" x="20" y="100" width="374" height="300"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zms-YG-RaR">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Firstname.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zms-YG-RaR">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="41.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" textContentType="name"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WOZ-TK-KOl">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lastname.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WOZ-TK-KOl">
                                         <rect key="frame" x="0.0" y="51.5" width="374" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" textContentType="name"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kmx-q0-H3Q">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="exemple@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kmx-q0-H3Q">
                                         <rect key="frame" x="0.0" y="103.5" width="374" height="41.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="go" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z7Y-og-LXt">
                                         <rect key="frame" x="0.0" y="155" width="374" height="41.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1L-LZ-0cX" customClass="GradientButtonView" customModule="FirebaseRxSwift" customModuleProvider="target">
@@ -139,10 +145,12 @@
                                             <action selector="signUpTapped:" destination="8Du-gb-22S" eventType="touchUpInside" id="jfX-F1-vBS"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebm-sq-Psb">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebm-sq-Psb">
                                         <rect key="frame" x="0.0" y="258.5" width="374" height="41.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="1" green="0.6376182856" blue="0.0016834623899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -180,7 +188,7 @@
         <!--Home View Controller-->
         <scene sceneID="1M1-qt-sYb">
             <objects>
-                <viewController id="WWU-Xg-NCW" customClass="HomeViewController" customModule="FirebaseRxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WWU-Xg-NCW" customClass="HomeViewController" customModule="FirebaseRxSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2PU-6g-skd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,6 +205,24 @@
                                 <color key="textColor" red="1" green="0.43845224939999999" blue="0.61513670649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucA-r7-E2y">
+                                <rect key="frame" x="20" y="44" width="30" height="45"/>
+                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="33"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="1" green="0.6376182856" blue="0.0016834623899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" red="1" green="0.6376182856" blue="0.0016834623899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="1" green="0.79413900670000004" blue="0.1432850796" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backTapped:" destination="WWU-Xg-NCW" eventType="touchUpInside" id="ENE-0D-eBC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tiy-d2-bvi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -204,6 +230,8 @@
                             <constraint firstItem="QZj-Yo-Ebu" firstAttribute="centerX" secondItem="2PU-6g-skd" secondAttribute="centerX" id="1Bg-4h-mkI"/>
                             <constraint firstItem="QZj-Yo-Ebu" firstAttribute="centerY" secondItem="2PU-6g-skd" secondAttribute="centerY" id="1Ri-bt-iub"/>
                             <constraint firstItem="DOI-ha-o1V" firstAttribute="top" secondItem="2PU-6g-skd" secondAttribute="top" id="HgR-O4-B50"/>
+                            <constraint firstItem="ucA-r7-E2y" firstAttribute="leading" secondItem="Tiy-d2-bvi" secondAttribute="leading" constant="20" id="WLb-rn-FeR"/>
+                            <constraint firstItem="ucA-r7-E2y" firstAttribute="top" secondItem="Tiy-d2-bvi" secondAttribute="top" id="Z6V-B0-g0E"/>
                             <constraint firstItem="DOI-ha-o1V" firstAttribute="leading" secondItem="Tiy-d2-bvi" secondAttribute="leading" id="i8F-RK-YYJ"/>
                             <constraint firstItem="DOI-ha-o1V" firstAttribute="trailing" secondItem="Tiy-d2-bvi" secondAttribute="trailing" id="rjk-mv-E3n"/>
                             <constraint firstAttribute="bottom" secondItem="DOI-ha-o1V" secondAttribute="bottom" id="tao-At-ke6"/>
@@ -228,19 +256,22 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PTI-17-D84">
                                 <rect key="frame" x="20" y="100" width="374" height="200"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ffh-WA-tsY">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="exemple@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ffh-WA-tsY">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="42.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="go" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GMY-qm-IiY">
                                         <rect key="frame" x="0.0" y="52.5" width="374" height="42.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pR8-81-VCO" customClass="GradientButtonView" customModule="FirebaseRxSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="105" width="374" height="42.5"/>
                                         <color key="backgroundColor" red="1" green="0.43845224939999999" blue="0.61513670649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="21"/>
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -256,10 +287,11 @@
                                             <action selector="signInTapped:" destination="LcI-bS-9UD" eventType="touchUpInside" id="XBF-U1-kmv"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alK-M9-Oah">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alK-M9-Oah">
                                         <rect key="frame" x="0.0" y="157.5" width="374" height="42.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.6376182856" blue="0.0016834623899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -295,16 +327,16 @@
     </scenes>
     <designables>
         <designable name="dNy-l2-TyT">
-            <size key="intrinsicContentSize" width="54" height="30"/>
+            <size key="intrinsicContentSize" width="71" height="33"/>
         </designable>
         <designable name="ebU-Kb-kjj">
-            <size key="intrinsicContentSize" width="47" height="30"/>
+            <size key="intrinsicContentSize" width="62" height="33"/>
         </designable>
         <designable name="g1L-LZ-0cX">
             <size key="intrinsicContentSize" width="54" height="30"/>
         </designable>
         <designable name="pR8-81-VCO">
-            <size key="intrinsicContentSize" width="47" height="30"/>
+            <size key="intrinsicContentSize" width="62" height="33"/>
         </designable>
     </designables>
     <resources>
