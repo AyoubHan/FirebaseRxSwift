@@ -8,8 +8,12 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import RxSwift
+import RxCocoa
 
 class SignUpViewController: UIViewController {
+    
+    // MARK: @IBOutlets
     
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -17,11 +21,28 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    
+    // MARK: Properties
+    
+    let bag = DisposeBag()
+    let signUpVewModel = SignUpViewModel()
+    
+    // MARK: ViewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setButton()
         setErrorLabel()
+        
+        firstNameTextField.rx.text.map { $0 ?? "" }.bind(to: signUpVewModel.firstnamePublisher).disposed(by: bag)
+        lastNameTextField.rx.text.map { $0 ?? "" }.bind(to: signUpVewModel.lastnamePublisher).disposed(by: bag)
+        emailTextField.rx.text.map { $0 ?? "" }.bind(to: signUpVewModel.emailPublisher).disposed(by: bag)
+        passwordTextField.rx.text.map { $0 ?? "" }.bind(to: signUpVewModel.passwordPublisher).disposed(by: bag)
+        
+        signUpVewModel.isConform().map { $0 ? 1 : 0.65 }.bind(to: signUpButton.rx.alpha).disposed(by: bag)
     }
+    
+    // MARK: @IBActions
     
     @IBAction func signUpTapped(_ sender: UIButton) {
         let error = fieldsCheck()
@@ -49,6 +70,8 @@ class SignUpViewController: UIViewController {
             }
         }
     }
+    
+    // MARK: Private Methods
     
     private func transitionToHome() {
         let homeVC = storyboard?.instantiateViewController(identifier: Storyboard.homeVC) as? HomeViewController

@@ -9,6 +9,9 @@ import Foundation
 import UIKit
 
 class ButtonStyles {
+    
+    // MARK: Methods
+    
     static func styleButton(_ button: UIButton) {
         button.layer.cornerRadius = 15.0
     }

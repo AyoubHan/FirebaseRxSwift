@@ -9,7 +9,7 @@ import UIKit
 
 class StartViewController: UIViewController {
     
-    // MARK: Outlets
+    // MARK: @IBOutlets
 
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
@@ -19,7 +19,7 @@ class StartViewController: UIViewController {
         setUpButtons()
     }
     
-    // MARK: private functions
+    // MARK: Private Methods
     
     private func setUpButtons() {
         ButtonStyles.styleButton(signInButton)

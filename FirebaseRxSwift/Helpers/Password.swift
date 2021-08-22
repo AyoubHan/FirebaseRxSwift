@@ -9,6 +9,8 @@ import Foundation
 
 class Password {
     
+    // MARK: Methods
+    
     static func isSecure(_ password: String) -> Bool {
         let securePassword = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
         return securePassword.evaluate(with: password)

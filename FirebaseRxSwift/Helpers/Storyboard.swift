@@ -8,6 +8,9 @@
 import Foundation
 
 struct Storyboard {
-        static let homeVC = "homeVC"
-        static let startVC = "startVC"
+    
+    // MARK: Properties
+    
+    static let homeVC = "homeVC"
+    static let startVC = "startVC"
 }

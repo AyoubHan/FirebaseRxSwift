@@ -7,19 +7,38 @@
 
 import UIKit
 import FirebaseAuth
+import RxSwift
+import RxCocoa
 
 class SignInViewController: UIViewController {
-
+    
+    // MARK: @IBOutlets
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    
+    // MARK: Properties
+    
+    let bag = DisposeBag()
+    let signInViewModel = SignInViewModel()
+    
+    // MARK: ViewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setButton()
         setUpLabel()
+        
+        emailTextField.rx.text.map {$0 ?? ""}.bind(to: signInViewModel.emailPublisher).disposed(by: bag)
+        passwordTextField.rx.text.map {$0 ?? ""}.bind(to: signInViewModel.passwordPublisher).disposed(by: bag)
+        
+        signInViewModel.isConform().map { $0 ? 1 : 0.65 }.bind(to: signInButton.rx.alpha).disposed(by: bag)
+        
     }
     
+    // MARK: @IBActions
     
     @IBAction func signInTapped(_ sender: UIButton) {
         let error = fieldsCheck()
@@ -28,7 +47,7 @@ class SignInViewController: UIViewController {
             showError(error ?? "")
         } else {
             let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-             let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+            let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
             
             Auth.auth().signIn(withEmail: email, password: password) { result, error in
                 if error != nil {
@@ -40,6 +59,8 @@ class SignInViewController: UIViewController {
         }
     }
     
+    // MARK: Private Methods
+    
     private func setUpLabel() {
         errorLabel.isHidden = true
     }
@@ -49,7 +70,7 @@ class SignInViewController: UIViewController {
         view?.window?.rootViewController = homeVC
         view?.window?.makeKeyAndVisible()
     }
-
+    
     private func setButton() {
         ButtonStyles.styleButton(signInButton)
     }
@@ -74,5 +95,5 @@ class SignInViewController: UIViewController {
         errorLabel.alpha = 0.65
         errorLabel.layer.cornerRadius = 15.0
     }
-
+    
 }

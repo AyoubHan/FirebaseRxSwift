@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    // MARK: @IBActions
+    
     @IBAction func backTapped(_ sender: UIButton) {
         let startViewController = storyboard?.instantiateViewController(identifier: "startVC") as? StartViewController
         view.window?.rootViewController = startViewController
